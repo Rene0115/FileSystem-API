@@ -5,7 +5,7 @@ import express from 'express';
 import pino from 'pino';
 import middleware from './middlewares/middleware.js';
 
-const app = express();
+const app:express.Application = express();
 
 const logger = pino();
 
