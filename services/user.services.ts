@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import mysql from 'mysql';
+import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
   host: 'localhost',

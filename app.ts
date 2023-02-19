@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/extensions */
 import express from 'express';
@@ -10,8 +11,8 @@ const logger = pino();
 
 middleware(app);
 
-app.listen(3500, () => {
-  logger.info('listening on port 3500');
+app.listen(4000, () => {
+  logger.info('listening on port 4000');
 });
 
 export default logger;
