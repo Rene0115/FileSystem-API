@@ -4,10 +4,8 @@
 import mysql from 'mysql';
 import logger from '../app.js';
 
-export let connection;
-
 const database = () => {
-  connection = mysql.createConnection({
+  const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
