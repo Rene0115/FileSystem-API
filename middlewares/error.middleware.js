@@ -1,6 +1,9 @@
-const errorHandler = (err, req, res, next) => {
-    return res.status(500).send({ success: false, message: err.message });
-  };
-  
-  export default errorHandler;
-  
+/* eslint-disable no-unused-vars */
+
+const errorHandler = (err, req, res, next) => res
+  .status(500).send({
+    success: false,
+    message: err.message
+  });
+
+export default errorHandler;

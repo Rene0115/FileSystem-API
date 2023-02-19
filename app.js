@@ -1,10 +1,17 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/extensions */
 import express from 'express';
+import pino from 'pino';
 import middleware from './middlewares/middleware.js';
 
 const app = express();
 
-middleware(app)
+const logger = pino();
 
-app.listen(3500, ()=> {
-    console.log('listening on port 3500');
-})
+middleware(app);
+
+app.listen(3500, () => {
+  logger.info('listening on port 3500');
+});
+
+export default logger;

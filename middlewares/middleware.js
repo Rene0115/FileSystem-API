@@ -1,21 +1,22 @@
-import router from "../routers/index.routes.js";
-import cors from "cors";
-import database from "../config/db.config.js";
-import express from "express";
-import errorHandler from "./error.middleware.js";
-import bodyParser from "body-parser";
+/* eslint-disable import/extensions */
+import cors from 'cors';
+import express from 'express';
+import bodyParser from 'body-parser';
+import router from '../routers/index.routes.js';
+import database from '../config/db.config.js';
+import errorHandler from './error.middleware.js';
 
 const middleware = (app) => {
-    app.use(express.urlencoded({ extended: true }));
-    app.use(express.json());
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(cors());
-    app.use(router);
-    database();
-    app.use('*', (req, res) => {
-      res.status(200).send('Server is Running Check API docs');
-    });
-    app.use(errorHandler);
-  };
-  
-  export default middleware;
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(cors());
+  app.use(router);
+  database();
+  app.use('*', (req, res) => {
+    res.status(200).send('Server is Running Check API docs');
+  });
+  app.use(errorHandler);
+};
+
+export default middleware;
