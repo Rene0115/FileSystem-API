@@ -3,19 +3,18 @@ import {Entity, PrimaryGeneratedColumn, Column, BaseEntity} from 'typeorm';
 @Entity()
 export class User extends BaseEntity{
    @PrimaryGeneratedColumn()
-   id: number | undefined; 
+   id!: number; 
 
    @Column()
-   firstname: string | undefined;
+   firstname!: string;
 
    @Column()
-   lastname: string | undefined;
+   lastname!: string;
 
    @Column()
-   email: string | undefined;
+   email!: string;
 
    @Column()
-   password: string | undefined;
-
+   password!: string;
 
 }

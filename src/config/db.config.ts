@@ -1,9 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable import/no-cycle */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-mutable-exports */
 import { createConnection } from 'typeorm';
-import logger from '../app.js';
+import { User } from '../Entities/user.entities.js';
 
 const database = () => {
   createConnection({
@@ -12,7 +8,8 @@ const database = () => {
     username: 'root',
     password: '',
     logging: true,
-    synchronize: true
+    synchronize: true,
+    entities: [User]
   });
 };
 export default database;

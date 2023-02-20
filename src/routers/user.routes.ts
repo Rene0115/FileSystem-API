@@ -4,6 +4,7 @@ import userController from '../controllers/user.controller.js';
 
 const userRouter = express.Router();
 
-userRouter.post('/createtable', userController.create);
+userRouter.get('/getusers', userController.getusers);
 
+userRouter.post('/createuser',userController.editUser);
 export default userRouter;
