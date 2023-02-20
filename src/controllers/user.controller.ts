@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { User } from '../Entities/user.entities.js';
+import bcrypt from 'bcrypt';
 
 class UserController {
   async getusers(req: Request, res: Response) {
@@ -14,7 +15,7 @@ class UserController {
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       email: req.body.email,
-      password: req.body.password
+      password: bcrypt.hashSync(req.body.password, 10)
     }
     const user = await User.insert(data);
     return res.end();
