@@ -8,7 +8,7 @@ const database = () => {
     username: 'root',
     password: '',
     logging: true,
-    synchronize: true,
+    synchronize: false,
     entities: [User]
   });
 };

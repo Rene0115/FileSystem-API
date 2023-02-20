@@ -9,7 +9,7 @@ const database = () => {
         username: 'root',
         password: '',
         logging: true,
-        synchronize: true,
+        synchronize: false,
         entities: [user_entities_js_1.User]
     });
 };

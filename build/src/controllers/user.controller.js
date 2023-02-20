@@ -14,6 +14,8 @@ class UserController {
     getusers(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const user = yield user_entities_js_1.User.find();
+            console.log(req.body.test);
+            console.log(typeof req.body.test);
             return res.status(200).send({
                 success: true,
                 data: user

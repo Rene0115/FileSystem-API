@@ -10,12 +10,13 @@ class UserController {
     });
   }
   async editUser(req: Request, res: Response) {
-    const user = await User.insert({
-      firstname: 'firstname',
-      lastname: 'lastname',
-      email: 'email',
-      password: 'password'
-    })
+    const data = {
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      password: req.body.password
+    }
+    const user = await User.insert(data);
     return res.end();
   }
 }
