@@ -2,9 +2,9 @@
 import cors from 'cors';
 import express from 'express';
 import bodyParser from 'body-parser';
-import router from '../routers/index.routes.js';
+import router from '../routers/index.routes';
 //import database from '../config/db.config.js';
-import errorHandler from './error.middleware.js';
+import errorHandler from './error.middleware';
 
 const middleware = (app:express.Application) => {
   app.use(express.urlencoded({ extended: true }));

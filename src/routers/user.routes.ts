@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import express from 'express';
-import userController from '../controllers/user.controller.js';
+import userController from '../controllers/user.controller';
 
 const userRouter = express.Router();
 

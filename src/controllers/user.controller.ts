@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { User } from '../Entities/user.entities.js';
+import { User } from '../Entities/user.entities';
 import bcrypt from 'bcrypt';
 
 class UserController {

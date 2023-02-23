@@ -2,7 +2,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable consistent-return */
 import Jwt from 'jsonwebtoken';
-import logger from '../app.js';
+import logger from '../app';
 import { Request, Response, NextFunction } from 'express';
 
 const authentication = (req: Request, res: Response, next: NextFunction) => {
