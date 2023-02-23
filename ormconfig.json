@@ -1,0 +1,15 @@
+
+{
+     "type": "mysql",
+     "host": "localhost",
+     "port": 3306,
+    "database": "TEST_API",
+   "username": "root",
+   "password": " ",
+   "logging": true,
+    "synchronize": false,
+   "entities": [
+       "src/Entities/**/*.ts"
+   ]
+
+}

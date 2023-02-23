@@ -3,7 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from '../routers/index.routes.js';
-import database from '../config/db.config.js';
+//import database from '../config/db.config.js';
 import errorHandler from './error.middleware.js';
 
 const middleware = (app:express.Application) => {
@@ -12,7 +12,7 @@ const middleware = (app:express.Application) => {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(cors());
   app.use(router);
-  database();
+ // database();
   app.use('*', (req:express.Request, res:express.Response) => {
     res.status(200).send('Server is Running Check API docs');
   });

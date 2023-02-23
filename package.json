@@ -1,5 +1,5 @@
 {
-  "name": "fs-api",
+  "name": "sql-api",
   "version": "1.0.0",
   "description": "An api that performa crud opertaions using mysql",
   "main": "app.js",
@@ -27,6 +27,7 @@
     "@types/express": "^4.17.13",
     "@types/joi": "^17.2.3",
     "@types/jsonwebtoken": "^9.0.1",
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "typescript": "^4.9.5"
   }
 }
