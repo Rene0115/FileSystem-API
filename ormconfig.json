@@ -5,7 +5,7 @@
      "port": 3306,
     "database": "TEST_API",
    "username": "root",
-   "password": " ",
+   "password": "",
    "logging": true,
     "synchronize": false,
    "entities": [
